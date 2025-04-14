@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&display=swap');
+.exercise-parent-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: auto;
+    width: 80%;
+}
+
+.image-container {
+    width: 60vw; /* Half of the screen width */
+    height: calc(100vh - 70px); /* Adjust height based on navbar height */
+    background-image: url('collage.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0; /* Ensure no extra margin */
+    padding: 0; /* Ensure no extra padding */
+}
+
+
+
+/* Right side containers (Message & Dropdown) */
+.exercise-right-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 85vh; /* Adjust height to match the left side */
+    padding: 0px 40px; 
+    /*gap: 30px; */
+    align-items: flex-start;
+    width:35%;
+}
+
+/* Exercise message container (Above Dropdown) */
+.exercise-message-container {
+    text-align: left;
+    max-width: 400px;
+    color: black;
+    width: 100%;
+    margin-left: 5%;
+}
+
+.exercise-message-container h3 {
+    font-size: 30px;
+    font-weight: 400;
+    font-family: sans-serif;
+    margin-top: 20px;
+    width: 200%;
+    font-style: italic;
+   
+}
+
+.exercise-message-container h1 {
+    font-size: 70px;
+    font-weight: 700;
+    line-height: 1.2;
+    font-family: 'Cormorant Garamond', serif;
+    width: 200%;
+    margin-top: 20px;
+    
+}
+
+
+/* Exercise dropdown container */
+.exercise-dropdown-container {
+    padding: 30px;
+    width: 150%;
+    height: 125px;
+    border-radius: 0px;
+    background-color: hsl(81, 13%, 42%);
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+    margin-left: 5%;
+}
+
+.exercise-dropdown-container label {
+    font-size: 25px;
+    font-weight: 600;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+
+#exercise-select {
+    width: 100%;
+    height: 60px;
+    margin-top: 20px;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: 600;
+    border: 2px solid #A3C4FC;
+    border-radius: 2px;
+    background-color: #f1f6eb;
+    color: #6f795d;
+    outline: none;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+/*right left button*/
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+}
+
+/* Modal Content */
+.modal-content-lr {
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    width:20%;
+    text-align: center;
+    box-shadow: 0px 4px 4px rgb(188, 193, 183);
+    border-radius: 10px;
+    /* Soft shadow around the modal */
+}
+.modal-content-lr h2{
+    word-spacing: 5px;
+    font-size: 30px;
+    margin-top: 2%;
+    margin-bottom: 0%;
+    border-bottom: #000000;
+    border-bottom-style: dashed;
+    border-bottom-width: 3px ;
+    display: inline-block;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+;}
+.modal-content-lr p{
+    color: #000000;
+    width: 90%;
+    font-style: italic;
+
+    letter-spacing:1px;
+    font-size: 23px;
+    display: inline-block;
+    margin-bottom: 0vh;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.modal-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 8%;
+
+    margin-bottom: 2%;
+    margin-left: 3%;
+    margin-right:3%;
+}
+
+.btn-left,
+.btn-right {
+    text-align: center;
+    border: none;
+    border-radius: 8px;
+    font-size: 22px;
+    font-family: monospace;
+    font-weight: bolder;
+    padding: 10px; /* More padding for a professional feel */
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    
+}
+
+.btn-left {
+    background: #007bff;
+    color: white;
+   
+}
+
+.btn-right {
+    background: #28a745;
+    color: white;
+}
+
+.btn-left:hover {
+    background: #0056b3;
+
+    transform: scale(1.05);
+
+}
+
+.btn-right:hover {
+    background: #218838;
+    
+    transform: scale(1.05);
+}

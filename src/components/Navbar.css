@@ -1,0 +1,402 @@
+/* Main container for the navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between; /* Space between logo and other content */
+    align-items: center; /* Vertically align items */
+    padding: 0 20px; /* Adjust padding as needed */
+    background-color: #033303; /* Gradient background */
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
+    height: 100px; /* Fixed height for navbar */
+    width: 98%;
+    position: relative;
+}
+
+/* Logo */
+.navbar-logo {
+    height: 100%; /* Make logo the same height as navbar */
+    display: flex;
+    align-items: center; /* Vertically center logo */
+    object-fit: contain; /* Prevent distortion */
+}
+
+.navbar-logo img {
+    height: 100%; /* Logo height matches navbar height */
+    width: auto; 
+    /* Maintain aspect ratio */
+    transition: transform 0.8s ease-in-out, margin 0.3s ease-in-out; /* Smooth hover effect */
+
+}
+.navbar-logo img:hover {
+
+    transform: scale(3); /* Scale the image */
+    transform-origin: top left; /* Anchor scaling to top-left corner */
+
+    box-shadow: 0 4px 10px rgba(210, 196, 196, 0.3); /* Add a subtle shadow */
+    /* border: 2px solid #f3f2ee; Optional border */
+
+}
+
+
+/* Links container styling */
+.navbar-links {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    margin-left: auto; /* Push links to the far right */
+    gap: 30px; /* Add spacing between links */
+}
+
+/* Individual links styling */
+.navbar-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: color 0.3s ease, transform 0.2s ease; /* Smooth transition */
+}
+
+/* Hover effect on links */
+.navbar-links a:hover {
+    color: #ffdd57; /* Golden color on hover */
+    transform: translateY(-6px); /* Slight upward movement */
+}
+
+/* Auth buttons container */
+.navbar-auth {
+    display: flex;
+    flex-direction: row; /* Ensure horizontal layout */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Align buttons properly */
+    margin-left: 40px; /*Add spacing from the links   */
+    white-space: nowrap; /* Prevent buttons from breaking into a new line */
+}
+
+/* Buttons should have the same height */
+.navbar-btn {
+    display: inline-block; /* Keep buttons inline */
+    padding: 10px 20px; /* Ensure uniform padding */
+    font-size: 20px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 600;
+    letter-spacing: 0.05cap;
+    border-radius: 10px;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    white-space: nowrap; /* Prevent buttons from breaking */
+}
+
+/* Ensure buttons do not take up full width */
+.login-btn, .signup-btn {
+    display: inline-block; /* Prevent full-width stretching */
+    width: auto; /* Adjust size to content */
+    min-width: 80px; /* Set a reasonable min-width */
+    margin-left: 10px; 
+    margin-right: 10px; 
+    margin-bottom: 13px;
+    box-shadow: #b1d6b1 2px 0px 1px 1px inset;
+}
+
+
+/* Hover effects on buttons */
+.navbar-btn:hover {
+    opacity: 0.8;
+    
+    transform: scale(1.2); /* Slight zoom effect */
+}
+
+/*New CSS /*
+
+
+/* Modal Background */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    /* Ensure it appears on top */
+}
+
+/* Modal Content */
+.modal-content-login {
+    background-color: rgb(116, 166, 140);
+    padding: 20px;
+    border-radius: 8px;
+    border: #ffffff 5px solid;
+    width: 25%;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Soft shadow around the modal */
+    font-family: 'Roboto', sans-serif;
+    h1{
+        color: #ffffff;
+        font-size:40px;
+        font-family: 'Helvetica', sans-serif; /* Change to your preferred font */
+        letter-spacing: 1px;
+        font-weight: 400;
+        
+        margin-bottom: 10px;
+        padding-bottom: 15px;
+        display: inline-block;
+        width: 60%;
+        border-bottom-style:solid;
+        border-bottom-color: #ffffff;
+        border-bottom-width: 5px;
+    
+    }
+}
+.modal-content-login input {
+    width:90%;
+    /* Make inputs take the full width of the container */
+    padding: 10px;
+    margin: 10px 0;
+    /* Add margin between inputs */
+    border: 1px solid #ccc;
+    /* Light border for inputs */
+    border-radius: 10px;
+    /* Rounded corners */
+    box-sizing: border-box;
+    /* Ensure padding doesn't affect the width */
+    font-size: 20px;
+    /* Set font size */
+}
+.modal-content-login button {
+    background-color:#000000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:10px;
+  
+    text-align: center;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.modal-content-login button:hover {
+    background-color: #064706;
+    opacity: 0.8;
+    transform: scale(1.05);
+    /* Slightly darker green on hover */
+}
+
+/* Close button styling */
+.modal-content-login button:last-child {
+    background-color: #cc2a58;
+    /* Red background for close button */
+}
+
+.modal-content-login button:last-child:hover {
+    background-color: #e53935;
+
+    /* Slightly darker red on hover */
+}
+
+/*Model signup css*/
+
+
+.modal-content-signup {
+    background-color: rgb(116, 166, 140);
+    padding: 20px;
+    border-radius: 10px;
+    border: #ffffff 4px solid;
+    width: 25%;
+    /* Ensure the modal takes the full width of the container */
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Soft shadow around the modal */
+    font-family: 'Roboto', sans-serif;
+    h1{
+        color: #ffffff;
+        font-size:40px;
+        font-family: 'Helvetica', sans-serif; /* Change to your preferred font */
+        letter-spacing: 1px;
+        font-weight: 400;
+        
+        margin-bottom: 10px;
+        padding-bottom: 15px;
+        display: inline-block;
+        width: 60%;
+        border-bottom-style:solid;
+        border-bottom-color: #ffffff;
+        border-bottom-width: 5px;
+    
+    }
+}
+
+/* Style for all input fields inside the sign-up modal */
+.modal-content-signup input {
+    width:90%;
+    /* Make inputs take the full width of the container */
+    padding: 10px;
+    margin: 10px 0;
+    /* Add margin between inputs */
+    border: 1px solid #ccc;
+    /* Light border for inputs */
+    border-radius: 10px;
+    /* Rounded corners */
+    box-sizing: border-box;
+    /* Ensure padding doesn't affect the width */
+    font-size: 20px;
+    /* Set font size */
+}
+/* Input Fields */
+input[type='text'],
+input[type="email"],
+input[type="password"] {
+    width: 90%;
+    padding: 18px;
+    
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 20px;
+    font-family: 'Roboto',
+        sans-serif;
+}
+
+/* Style for the buttons */
+
+.modal-content-signup button {
+    background-color:#000000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:10px;
+  
+    text-align: center;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.modal-content-signup button:hover {
+    background-color: #064706;
+    opacity: 0.8;
+    transform: scale(1.05);
+    /* Slightly darker green on hover */
+}
+
+/* Close button styling */
+.modal-content-signup button:last-child {
+    background-color: #cc2a58;
+    /* Red background for close button */
+}
+
+.modal-content-signup button:last-child:hover {
+    background-color: #e53935;
+
+    /* Slightly darker red on hover */
+}
+
+/*model signup close*/
+
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+
+
+/* Ensure elements stay on the same line */
+.user-info-container {
+    display: inline-flex;
+    /* Use inline-flex to make sure they stay on one line */
+    align-items: center;
+    /* Vertically centers items */
+    gap: 10px;
+    
+
+    /* Adds space between the message and the button */
+}
+
+/* Styling for the welcome message */
+.welcome-message {
+    color: #c9e70b;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin-top: 6px;
+    border-bottom: 2px dashed #c9e70b; /* Adds an underline */
+    display: inline-block; /* Ensures underline is only as wide as the text */
+    padding-bottom: 5px;
+    font-size: 18px;
+    /* Set font size */
+    font-weight:bold;
+    /* Set font weight */
+    white-space: nowrap;
+    /* Prevent text from wrapping */
+}
+
+/* Styling for the logout button */
+.signout-btn {
+    background-color: #db1212;
+    /* Red background color */
+    color: rgb(255, 255, 255);
+    width: auto;
+    display: inline-block; /* Keep buttons inline */
+    padding: 10px 20px; /* Ensure uniform padding */
+    font-size: 20px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 600;
+    letter-spacing: 0.05cap;
+    border-radius: 10px;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    white-space: nowrap; /* Prevent buttons from breaking */
+    min-width: 80px; /* Set a reasonable min-width */
+    margin-left: 10px; 
+    margin-right: 10px; 
+    margin-bottom: 13px;
+    box-shadow: #ff7c7c 2px 0px 1px 1px inset;
+}
+
+
+.signout-btn:hover {
+    background-color: #ff2f32;
+    opacity: 1;
+    transform: scale(1.05);
+    /* Slightly darker green on hover */
+}
+/*experimental/*
+
+/* Button Styling for Modal */
+button {
+    margin-top: 10px;
+    padding: 12px;
+    width: 100%;
+    background-color: #38b01f;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    box-sizing: border-box;
+    font-family: 'Roboto',
+        sans-serif;;
+}
+
+/* Button Hover Effect */
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Close Button */
+button.close-btn {
+    background-color: #f44336;
+    /* Red for close */
+    margin-top: 20px;
+}
+
+button.close-btn:hover {
+    background-color: #d32f2f;
+    /* Darker red on hover */
+}

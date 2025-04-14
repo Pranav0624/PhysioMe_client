@@ -1,0 +1,64 @@
+/* Footer styles */
+.footer {
+    background-color: #033303;
+    color: white;
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: auto;  /* Ensures footer stays at the bottom */
+}   
+
+.footer-content {
+    color: white;
+
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    
+    
+}
+
+.footer-left, .footer-right {
+    flex: 1;
+    margin-left: 5%;
+}
+
+.footer-left h4, .footer-right h4 {
+    margin-bottom: 10px;
+    font-size: 30px;
+    border-bottom: 2px solid white; /* Adds an underline */
+    display: inline-block; /* Ensures underline is only as wide as the text */
+    padding-bottom: 5px; /* Adds spacing for better visibility */
+}
+
+
+.footer-right a {
+    color: yellowgreen;
+    font-size: 20px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer-right a:hover {
+    text-decoration: underline;
+}
+.footer-right p{
+    color: white;
+    margin-bottom: 0px;
+    font-size: 15px;
+}
+
+.footer-left a {
+    text-decoration: none;
+    color: yellowgreen;
+    
+}
+.footer-left a:hover {
+    text-decoration: underline;
+}
+.footer-left p{
+    color: white;
+
+}

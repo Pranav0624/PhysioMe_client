@@ -1,0 +1,61 @@
+/* Gauge container for the scale */
+.gauge-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 400px;
+  height: 350px;
+  background: linear-gradient(135deg, #88eb81, #2bbc91); /* Gradient background */
+  border-radius: 50%; /* Circular shape */
+  padding: 25px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Angle label styling */
+.angle-label {
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #2a4e56; /* Dark greenish-blue tone */
+}
+
+/* Needle styling */
+.needle {
+  stroke: #ff5733; /* Bright color for needle */
+  stroke-width: 3;
+  transition: transform 0.3s ease-in-out; /* Smooth transition */
+}
+
+/* Circular background styling */
+.circle-background {
+  fill: none;
+  stroke: url(#gradientStroke);
+  stroke-width: 5;
+}
+
+/* Styling for text markers */
+.text-markers {
+  fill: #555;
+  font-size: 12px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.text-markers:hover {
+  fill: #ff5733; /* Hover effect */
+}
+
+/* Add shadow to the gauge */
+.shadow {
+  filter: drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.2));
+}
+
+/* Needle animation */
+@keyframes needleAnimation {
+  0% {
+      transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(360deg);
+  }
+}

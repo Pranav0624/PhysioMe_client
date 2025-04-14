@@ -1,0 +1,83 @@
+/* importing fonts haasini*/
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&display=swap');
+
+/* General container styling for the FAQ section */
+#faq {
+    padding: 2rem;
+    background: #293a29; /* Solid color without 'solid' keyword */
+    border-radius: 1px;
+    max-width: 1140px;
+    margin: 2rem auto; /* Adding margin for spacing between sections */
+    text-align: left;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Hover effect for FAQ section */
+#faq:hover {
+    transform: scale(1.02);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+#faq h2 {
+    font-size: 4rem;
+    color: #ffffff;
+    border-bottom: 4px solid #afff47;
+    padding-bottom: 12px;
+    font-family: 'Cormorant Garamond', serif;
+    margin-bottom: 25px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-top:5px ;
+}
+
+.faq-card {
+    margin-bottom: 10px;
+    padding: 0.15rem;
+    background: #ffffff;
+    font-family: 'Quicksand', sans-serif; /* Cute and modern font */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.faq-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.faq-question {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #2b547e;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
+.faq-answer {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #333;
+    margin-left: 10px;
+}
+
+@media screen and (max-width: 768px) {
+    #faq {
+        padding: 2rem;
+        margin: 1rem;
+    }
+
+    #faq h2 {
+        font-size: 2.2rem;
+    }
+
+    .faq-question {
+        font-size: 1.4rem;
+    }
+
+    .faq-answer {
+        font-size: 1.1rem;
+    }
+}

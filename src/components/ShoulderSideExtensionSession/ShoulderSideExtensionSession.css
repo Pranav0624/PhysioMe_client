@@ -1,0 +1,84 @@
+/* General container for the whole session, including both ShoulderSession and RepsDisplay */
+.shoulder-session-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    /* Align everything to the left */
+    padding: 20px;
+    /* Add padding around the container */
+    max-width: 600px;
+    /* Limit the width of the container */
+    margin: 0;
+    /* Remove auto-centering, align the container to the left */
+}
+
+/* Headings (titles) inside the container */
+.shoulder-session-container h1,
+.shoulder-session-container h2 {
+    margin-bottom: 10px;
+    /* Space below the headings */
+    text-align: left;
+    /* Ensure headings are aligned left */
+}
+
+.box {
+    background-color: #f8f8f8;
+    /* Light background for the boxes */
+    border: 1px solid #ddd;
+    /* Light border */
+    border-radius: 8px;
+    /* Rounded corners */
+    padding: 15px;
+    /* Padding inside the box */
+    margin-bottom: 20px;
+    /* Space between boxes */
+    width: 100%;
+    /* Full width of the container */
+    text-align: left;
+    /* Align text inside the box to the left */
+}
+
+/* Ensure all paragraphs inside each box are left-aligned */
+.box p {
+    margin: 5px 0;
+    /* Space between paragraphs */
+    text-align: left;
+    /* Align text to the left */
+}
+
+/* Remove box styles and replace with simple content styling */
+.content-section {
+    padding: 15px;
+    /* Padding for sections */
+    margin-bottom: 20px;
+    /* Space between sections */
+    width: 100%;
+    /* Full width of the container */
+    text-align: left;
+    /* Align text inside the section to the left */
+}
+
+/* Ensure all paragraphs inside each section are left-aligned */
+.content-section p {
+    margin: 5px 0;
+    /* Space between paragraphs */
+    text-align: left;
+    /* Align text to the left */
+}
+
+/* Button styling */
+button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    text-align: left;
+    /* Align button text to the left */
+}
+
+button:hover {
+    background-color: #45a049;
+}

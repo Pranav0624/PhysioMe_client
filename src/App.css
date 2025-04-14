@@ -1,38 +1,102 @@
-.App {
-  text-align: center;
-}
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&display=swap');
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+/* About, Services, Contact, FAQ sections */
+section {
+    width: 100%; /* Ensure full width */
+    max-width: 1200px; /* Optionally set a max width */
+    margin: 0 auto; /* Center content */
   }
+
+
+p,
+li {
+    color: #666;
+    font-size: 18px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+ul {
+    list-style-type: disc;
+    padding-left: 20px;
 }
 
-.App-link {
-  color: #61dafb;
-}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    gap: 5%;
+    flex-wrap: wrap;
+    margin: 40px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
   }
-}
+  
+  /* to import the cute font called quicksand */
+  @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap');
+
+  .card {
+    width: 250px;
+    padding: 20px;
+    background:#033303;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }
+  
+  .card h3 {
+    color: #ddd;
+    font-size: 28px;
+    font-style: italic;
+    margin: 10px 0 5px;
+    font-family: 'Quicksand', sans-serif; /* Cute and modern font */
+  }
+  
+  .card p {
+    font-size: 14px;
+    color: #ffffff;
+    font-family: 'Quicksand', sans-serif; /* Cute and modern font */
+  }
+
+  .exercises-header {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .exercises-header h1 {
+    font-size: 50px;
+    font-weight: 500px;
+    color: #333;
+    margin: 0;
+    padding: 10px;
+    font-family: 'Cormorant Garamond', serif;
+    border-bottom: 4px dotted #ddd; /* Optional styling for emphasis */
+    border-top: 4px solid #ddd; /* Optional styling for emphasis */
+  }
+  /*end it till here haasini*/
+
+  .App {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+footer {
+    margin-top: auto; /* Push footer to the bottom */
+  }
+  body {
+    background-color: rgb(255, 255, 255);  
+  }
+  

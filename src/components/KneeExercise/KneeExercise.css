@@ -1,0 +1,142 @@
+/* Wrapper for the entire page */
+.knee-flex-page-wrapper {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height:89vh;
+    width: 100%;  /* Add padding around the page */
+}
+
+/* Layout for the GIF and the form container side by side */
+.kn-exercise-layout {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 100vh;
+    width: 150%;/* Align items to the center vertically */
+}
+
+/* Styling for the GIF container */
+.kn-gif-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1; /* Set max-width to match the container */
+}
+
+.kn-exercise-gif {
+    width: 100%; /* Make the GIF fill its container */
+    max-height: 730px;/* Shadow for emphasis */
+}
+
+/* Styling for the main form container */
+.kn-knee-exercise-container {
+    flex: 1;
+    max-width: 800px;
+    height: 100%;
+    background: #6d7a57;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-start;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling for the heading */
+.kn-knee-exercise-container h2 {
+    margin-top: 9%;
+    text-align: center;
+    text-transform: uppercase; /* add this to make text uppercase */
+    font-weight:bolder;/* add this to make text bold */
+    color: #ffffff;
+    border-bottom: white 4px solid;
+    border-bottom-style: dashed;
+    margin-bottom: 30px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 45px;
+    letter-spacing: 1px;
+    word-spacing: 10px;/* Align heading text to the left */
+}
+
+
+/* Styling for labels */
+.kn-knee-exercise-form label {
+    display: block;
+    font-size: 28px;
+    margin-left: 10%;
+    margin-right: 10%;
+    color: #ffffff;
+    font-weight: bold;
+    font-family:'Cormorant Garamond',serif;    
+    margin-bottom: 13px; /* Space between label and input */
+}
+
+/* Styling for input fields */
+.kn-knee-exercise-form input {
+    width: 100%; /* Ensure uniform width */
+    /*max-width: 350px; /* Optional: Adjust based on layout */
+    padding: 10px; /* Consistent padding */
+    border: 1px solid #d6e1d6;
+    margin-top: 6px;
+    font-size: 16px;
+    border-radius: 0px;
+    outline: none;
+    display: block; /* Ensures proper alignment */
+    box-sizing: border-box;  /* Height is inclusive of padding and border */
+}
+
+/* When the input fields are focused */
+.kn-knee-exercise-form input:focus {
+    border-color: #062708;
+    box-shadow: 0 0 5px rgba(46, 125, 50, 0.5);
+}
+
+/* Styling for the submit button */
+/* Buttons */
+.kn-button-group {
+    display: flex;
+    gap: 40px; /* Adds space between buttons */
+    justify-content: center; 
+}
+
+.kn-start-exercise-btn,
+.kn-live-tracking-btn {
+    /* Adjust width to fit content */
+    flex: 1; /* Distributes space equally */
+    padding: 15px;
+    text-transform: uppercase;
+    font-size: 25px;
+    font-weight: bold;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+    text-align: center;
+    margin-top: 1%;
+    
+    font-family: 'League Spartan', sans-serif; /* Apply font */;
+}
+
+.kn-start-exercise-btn {
+    background-color:#40aa9c;
+    color: white;
+    margin-left: 17%;
+    
+    
+}
+
+.kn-start-exercise-btn:hover {
+    background-color:rgb(123, 191, 22);
+    transform: scale(1.1);
+}
+
+.kn-live-tracking-btn {
+    background-color:#40aa9c;
+    color: #ffffff;
+    margin-right: 17%;
+}
+
+.kn-live-tracking-btn:hover {
+    background-color:rgb(123, 191, 22);
+    transform: scale(1.1);
+}

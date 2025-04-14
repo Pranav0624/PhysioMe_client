@@ -1,0 +1,113 @@
+/* Container for the heading */
+.services-heading-container {
+    text-align: left;
+    max-width: 100%;
+    margin: 2rem auto 0.5rem auto; /* Reduce bottom margin */
+    border-bottom: 3px solid #a6b04a; /* Add line below heading */
+    padding-bottom: 5px; /* Add space between heading and line */
+}
+
+/* Styling for the Services heading */
+.services-heading {
+    font-size: 3.5rem;
+    color: black;
+    font-weight: 800;
+    font-family: serif; /* Match font style */
+    letter-spacing: 1px;
+    margin-bottom: 0; /* Remove bottom margin */
+}
+
+/* General container styling for the content box */
+.services-container {
+    padding: 1.5rem; /* Reduce padding */
+    background-color: #637863; /* Keep green background */
+    max-width: 100%; /* Stretch across */
+    height: auto; /* Adjust dynamically based on content */
+    margin: 0 auto; /* Center properly */
+    text-align: left;
+    box-shadow: none; /* Remove shadow */
+    border: none; /* Remove border */
+    border-radius: 1px; /* Soft rounded corners */
+}
+
+/* Hover effect for Services section */
+.services-container {
+    transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+}
+
+.services-container:hover {
+    transform: scale(1.05); /* Slightly larger scaling */
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2);
+}
+
+/* Paragraph Styling */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap');
+
+.services-container p {
+    font-size: 1.4rem;
+    line-height: 1.6;
+    color: #fcfcfc;
+    margin-bottom: 15px;
+    letter-spacing: 0.5px;
+    font-family: 'Quicksand', sans-serif; /* Cute and modern font */
+}
+
+/* Last paragraph for emphasis */
+.services-container p:last-child {
+    font-weight: 800;
+    color: #000000;
+    font-family: 'Quicksand', sans-serif; /* Ensuring consistency */
+}
+
+/* Styling for the Services List */
+.services-list-container {
+    margin-top: 10px;
+}
+
+.services-list {
+    list-style-type: none; /* Remove default bullets */
+    padding-left: 0;
+}
+
+.services-list li {
+    font-size: 1.3rem;
+    line-height: 1;
+    color: #fcfcfc;
+    font-family: 'Quicksand', sans-serif;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+/* Custom bullet point */
+.services-list li::before {
+    content: "✔"; /* Checkmark symbol */
+    color: #a6b04a;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .services-heading-container {
+        max-width: 95%;
+    }
+
+    .services-heading {
+        font-size: 2.2rem;
+    }
+
+    .services-container {
+        padding: 1.5rem;
+        margin: 1rem auto;
+    }
+
+    .services-container p {
+        font-size: 1.1rem;
+    }
+
+    .services-list li {
+        font-size: 1.1rem;
+    }
+}

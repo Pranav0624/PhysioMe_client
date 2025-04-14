@@ -1,0 +1,79 @@
+/* General styles for the container */
+.analysis-container {
+    padding: 20px;
+    font-family: 'Arial', sans-serif;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Main title (Session Analysis) */
+.analysis-title {
+    text-align: center;
+    color: #333;
+    font-size: 2.5em;
+    margin-bottom: 30px;
+}
+
+/* Common style for all section boxes */
+.section-box {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #f9f9f9;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Titles for each section (Participant Information, Reps Summary) */
+.section-title {
+    color: #0056b3;
+    font-size: 1.5em;
+    border-bottom: 2px solid #0056b3;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Style for the information paragraphs */
+.info-paragraph {
+    font-size: 1.1em;
+    margin: 10px 0;
+    color: #333;
+}
+
+/* Styling for labels (strong tags) */
+.info-paragraph strong {
+    color: #555;
+    font-weight: bold;
+}
+
+/* Error message style */
+.error-message {
+    color: red;
+    font-size: 1.2em;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Responsive design for smaller screens */
+@media screen and (max-width: 600px) {
+    .analysis-container {
+        padding: 10px;
+    }
+
+    .analysis-title {
+        font-size: 2em;
+    }
+
+    .section-title {
+        font-size: 1.3em;
+    }
+
+    .info-paragraph {
+        font-size: 1em;
+    }
+
+    .section-box {
+        padding: 15px;
+    }
+}

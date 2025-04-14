@@ -1,0 +1,99 @@
+
+/* Wrapper for the entire page */
+.shoulder-session-wrapper {
+    background: linear-gradient(to bottom, #349d52, #69d48f);
+    min-height: 100vh;
+    max-height: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    padding: 40px;
+    font-family: 'Poppins', sans-serif;
+    color: #0d0d0d;
+    gap: 40px;
+}
+
+/* Layout adjustments 
+.ss-exercise-layout {
+    display: grid;
+    grid-template-areas: 
+        "info gif"
+        "sensor reps"
+        "scale scale";
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 40px;
+    max-width: 1200px;
+    width: 100%;
+    align-items: start;
+}
+*/
+/* Personal information box - positioned top left */
+.ss-info-box {
+    grid-area: info;
+    justify-self: start;
+    align-self: start;
+    width: 300px;
+    background: #e8eae9;
+    border: 1px solid #cce5e3;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* GIF container styling - positioned top right */
+.ss-gif-container {
+    grid-area: gif;
+    justify-self: end;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+    height: 500px;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.ss-exercise-gif {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Reps tracker box - positioned right side */
+.ss-reps-box {
+    grid-area: reps;
+    background: #03311c;
+    border: 1px solid #cce5e3;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Scale container - positioned at the bottom center */
+.ss-scale-box {
+    grid-area: scale;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+/* Sensor tracker box - positioned left side */
+.ss-sensor-box {
+    grid-area: sensor;
+    background: #f3fef9;
+    border: 1px solid #cce5e3;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+

@@ -1,0 +1,43 @@
+/* Container for reps display */
+.reps-display-container {
+  margin: 20px;
+}
+
+/* Flex layout for reps and sensor data */
+.flex-container {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  gap: 40px;
+}
+
+/* Styling for sensor data, angle scale, and reps tracker */
+.sensor-data, .angle-scale, .reps-tracker {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
+}
+
+h1, h2 {
+  text-align: left;
+}
+
+/* Button styling */
+button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #03170e, #3ca7b8);
+  color: white;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}

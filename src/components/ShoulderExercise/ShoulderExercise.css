@@ -1,0 +1,192 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;700&display=swap');
+
+/* Main container - Full page fit */
+.shoulder-flex-page-wrapper {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height:89vh;
+    width: 100%; /* Prevents scrollbars if content overflows */
+}
+
+/* Layout for GIF & Form - Adjusts dynamically */
+.sh-exercise-layout {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 100vh;
+    width: 150%;
+}
+
+/* GIF Container */
+.sh-gif-container {
+     /* Adjust height based on navbar height */ /* Half of the screen width */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    
+}
+
+.sh-exercise-gif {
+    width: 100%; /* Make the GIF fill its container */
+    max-height: 825px; /* Maintain aspect ratio */
+ /* Limit the height */
+    
+    
+    
+}
+
+/* Form Container */
+.sh-shoulder-exercise-container {
+    flex: 1;
+    max-width: 800px;
+    height: 100%;
+    background: #6d7a57;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-start;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Heading */
+.sh-shoulder-exercise-container h2 {
+    margin-top: 9%;
+    text-align: center;
+    text-transform: uppercase; /* add this to make text uppercase */
+    font-weight:bolder;/* add this to make text bold */
+    color: #ffffff;
+    border-bottom: white 4px solid;
+    border-bottom-style: dashed;
+    margin-bottom: 30px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 45px;
+    letter-spacing: 1px;
+    word-spacing: 10px;
+
+}
+
+/* Form Fields */
+.sh-shoulder-exercise-form label {
+    
+    display: block;
+    font-size: 28px;
+    margin-left: 10%;
+    margin-right: 10%;
+    color: #ffffff;
+    font-weight: bold;
+    font-family:'Cormorant Garamond',serif;    
+    margin-bottom: 13px;
+    
+}
+
+.sh-shoulder-exercise-form input {
+    width: 100%; /* Ensure uniform width */
+    /*max-width: 350px; /* Optional: Adjust based on layout */
+    padding: 10px; /* Consistent padding */
+    border: 1px solid #d6e1d6;
+    margin-top: 6px;
+    font-size: 18px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    border-radius: 0px;
+    outline: none;
+    display: block; /* Ensures proper alignment */
+    box-sizing: border-box; /* Prevents extra width from padding */
+}
+
+.sh-shoulder-exercise-form input:focus {
+    border-color: #062708;
+    box-shadow: 0 0 5px rgba(46, 125, 50, 0.5);
+}
+
+/* Buttons */
+.sh-button-group {
+    display: flex;
+    gap: 40px; /* Adds space between buttons */
+    justify-content: center; 
+}
+
+.sh-start-exercise-btn,
+.sh-live-tracking-btn {
+    /* Adjust width to fit content */
+    flex: 1; /* Distributes space equally */
+    padding: 15px;
+    text-transform: uppercase;
+    font-size: 30px;
+    font-weight: bold;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.3s;
+    text-align: center;
+    margin-top: 1%;
+    font-style: italic;
+    font-family: 'League Spartan', sans-serif; /* Apply font */;
+}
+
+.sh-start-exercise-btn {
+    background-color:#40aa9c;
+    color: white;
+    margin-left: 17%;
+    
+    
+}
+
+.sh-start-exercise-btn:hover {
+    background-color:rgb(123, 191, 22);
+    transform: scale(1.1);
+}
+
+.sh-live-tracking-btn {
+    background-color:#40aa9c;
+    color: #ffffff;
+    margin-right: 35%;
+    margin-left: 35%;
+}
+
+.sh-live-tracking-btn:hover {
+    background-color:rgb(123, 191, 22);
+    transform: scale(1.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .sh-exercise-layout {
+        flex-direction: column;
+    }
+
+    .sh-gif-container,
+    .sh-shoulder-exercise-container {
+        max-width: 100%;
+        flex: none;
+    }
+
+    .sh-shoulder-exercise-container {
+        height: auto;
+        padding: 20px;
+    }
+    .shoulder-flex-page-wrapper {
+        height: auto; /* Adjusts height for small screens */
+        padding: 10px;
+    }
+
+    .sh-exercise-layout {
+        flex-direction: column;
+        max-width: 100%;
+        padding: 15px;
+    }
+
+    .sh-gif-container {
+        order: 1;
+        max-width: 100%;
+    }
+
+    .sh-shoulder-exercise-container {
+        order: 2;
+        width: 100%;
+    }
+}

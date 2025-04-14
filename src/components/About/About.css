@@ -1,0 +1,82 @@
+/* Container for the heading */
+.about-heading-container {
+    text-align: left;
+    max-width: 100%;
+    margin: 2rem auto 0.5rem auto; /* Reduce bottom margin */
+    border-bottom: 3px solid #a6b04a; /* Add line below heading */
+    padding-bottom: 5px; /* Add space between heading and line */
+}
+
+/* Styling for the About heading */
+.about-heading {
+    font-size: 3.5rem;
+    color: black;
+    font-weight: 800;
+    font-family: serif; /* Match font style */
+    letter-spacing: 1px;
+    margin-bottom: 0; /* Remove bottom margin */
+}
+
+/* General container styling for the content box */
+.about-container {
+    padding: 1.5rem; /* Reduce padding */
+    background-color: #7d987d; /* Keep green background */
+    max-width: 100%; /* Stretch across */
+    height: auto; /* Adjust dynamically based on content */
+    margin: 0 auto; /* Center properly */
+    text-align: left;
+    box-shadow: none; /* Remove shadow */
+    border: none; /* Remove border */
+}
+
+
+/* Hover effect for About section */
+.about-container {
+    transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+}
+
+.about-container:hover {
+    transform: scale(1.05); /* Slightly larger scaling */
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Paragraph Styling */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap');
+
+.about-container p {
+    font-size: 1.4rem;
+    line-height: 1.6;
+    color: #fcfcfc;
+    margin-bottom: 15px;
+    letter-spacing: 0.5px;
+    font-family: 'Quicksand', sans-serif; /* Cute and modern font */
+}
+
+/* Last paragraph for emphasis */
+.about-container p:last-child {
+    font-weight: 700;
+    color: #000000;
+    font-family: 'Quicksand', sans-serif; /* Ensuring consistency */
+}
+
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .about-heading-container {
+        max-width: 95%;
+    }
+
+    .about-heading {
+        font-size: 2.2rem;
+    }
+
+    .about-container {
+        padding: 1.5rem;
+        margin: 1rem auto;
+    }
+
+    .about-container p {
+        font-size: 1.1rem;
+    }
+}
