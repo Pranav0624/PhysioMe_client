@@ -7,6 +7,8 @@ import { getAuth, onAuthStateChanged, signInWithEmailAndPassword, createUserWith
 
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { ref, set } from "firebase/database"; 
+import { db } from './firebaseConfig'
 
 const Navbar = () => {
   const [isLoginOpen, setIsLoginOpen] = useState(false);
@@ -15,6 +17,7 @@ const Navbar = () => {
   const [emailAuth, setEmailAuth] = useState('');  // Email input field
   const [passwordAuth, setPasswordAuth] = useState('');  // Password input field
   const [nameAuth, setNameAuth] = useState('');  // Name input field for sign up
+   const [role, setRole] = useState('Patient');
 
   const handleLoginClick = () => setIsLoginOpen(true);
   
@@ -55,6 +58,15 @@ const Navbar = () => {
       await updateProfile(user, {
         displayName: nameAuth, // Set the display name for the user
       });
+
+         const userRole = role; // Doctor or Patient
+    set(ref(db, `${userRole}/${user.uid}`), {
+      uid: user.uid,
+      name: nameAuth,
+      email: emailAuth,
+      role: userRole, // Store role
+    });
+
 
       setEmailAuth('');
       setPasswordAuth('');
@@ -149,6 +161,7 @@ const Navbar = () => {
               value={passwordAuth}
               onChange={(e) => setPasswordAuth(e.target.value)}
             />
+             
             <button onClick={handleLogin}>Login with Email</button>
             <button onClick={handleGoogleLogin}>Login with Google</button>
             <button onClick={() => setIsLoginOpen(false)}>Close</button>
@@ -179,6 +192,10 @@ const Navbar = () => {
               value={passwordAuth}
               onChange={(e) => setPasswordAuth(e.target.value)}
             />
+             <select value={role} onChange={(e) => setRole(e.target.value)}>
+              <option value="Patient">Patient</option>
+              <option value="Doctor">Doctor</option>
+            </select>
             <button onClick={handleSignUp}>Sign Up with Email</button>
             <button onClick={() => setIsSignUpOpen(false)}>Close</button>
           </div>
