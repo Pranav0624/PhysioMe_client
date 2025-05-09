@@ -156,6 +156,23 @@ const LiveTracking = () => {
         });
     };
 
+    const handleResetSensorData = () => {
+    fetch("http://localhost:3001/reset-sensor-data", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+    })
+    .then(res => res.json())
+    .then(data => {
+        console.log("Sensor data reset:", data.message);
+        setSensorData1(prev => ({
+            ...prev,
+            reps: 0,
+            invalidReps: 0
+        }));
+    })
+    .catch(error => console.error("Error resetting sensor data:", error));
+};
+
     return (
         <div className="live-tracking-container">
             {/* Left Side - Player */}
@@ -188,17 +205,34 @@ const LiveTracking = () => {
                         <p><strong>Efficiency:</strong> {sensorData1?.efficiency?.slice(-1)[0] ?? "N/A"}%</p>
                         <p><strong>Last Angle:</strong> {sensorData1?.lastAngle}</p>
 
-                        {sensorData2?.pitch < 90 && sensorData2?.pitch > 0 && (
+                     
+
+                            {(sensorData1?.yaw < -105 || sensorData1?.yaw > -75) && (
                             <p style={{ color: 'red' }}>
-                                ⚠ Adjust Lower Arm Pitch: Keep it between 0° and 90° for accurate readings!
+                                ⚠ Incorrect form. Fix your posture. Keep your arm facing forward.
                             </p>
 
                             
                         )}
 
-                        {Math.abs(sensorData1.yaw-sensorData2.yaw)>TOLERANCE && Math.abs(sensorData1.roll-sensorData2.roll)>TOLERANCE  && (
+                         {(sensorData1?.pitch +80) > (formData.threshold) && (
+                            <p style={{ color: 'green' }}>
+                                ⚠ You are going above the recommended threshold
+                            </p>             
+                            
+                        )}
+
+                          {(sensorData1?.pitch +90) > (formData.threshold) && (
+                            <p style={{ color: 'green' }}>
+                                ⚠ Great! Now lower your arm back to the start.
+                            </p>
+
+                            
+                            
+                        )}
+                        {Math.abs(sensorData1.yaw-sensorData2.yaw)>TOLERANCE || Math.abs(sensorData1.roll-sensorData2.roll)>TOLERANCE  && (
                                                     <p style={{ color: 'red' }}>
-                                                        ⚠ Please adjust the lower arm to be in sync with the upper arm and maintain roll/yaw within ±50 degrees of initial position.
+                                                        ⚠ Incorrect form. Don't tilt your arm sideways..
                                                     </p>
 
                                                     
@@ -210,6 +244,12 @@ const LiveTracking = () => {
                 <div className="navigation-button">
                     <button onClick={navigateToShoulderAnalysis}>
                         GO TO SHOULDER ANALYSIS
+                    </button>
+                </div>
+
+                 <div className="navigation-button">
+                    <button onClick={handleResetSensorData}>
+                        RESET
                     </button>
                 </div>
             </div>

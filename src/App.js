@@ -60,6 +60,21 @@ function App() {
     });
     return () => unsubscribe(); // Cleanup on unmount
   }, []);
+
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (e.key === "x" || e.key === "X") {
+        fetch("http://esp32.local/restart")
+          .then((res) => res.text())
+          .then((msg) => alert(msg))
+          .catch((err) => alert("Failed to contact ESP32"));
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+
+    return () => window.removeEventListener("keydown", handleKeyDown);
+},[]);
   const fetchUserRole = async (userId) => {
     try {
       const patientRef = ref(db, `Patient/${userId}`);
